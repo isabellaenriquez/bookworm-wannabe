@@ -1,7 +1,8 @@
-# Project 1
+# Bookworm Wannabe
 
-Simple book review website "Bookworm Wannabe," using Flask, Python, SQL, Bootstrap, HTML, and CSS. Submitted as Project 1 for CS50W.
+Simple book review website using Flask, Python, SQL (PostgreSQL), Bootstrap, HTML, and CSS. Submitted as Project 1 for CS50W (2018 edition). Features a database of 5000 books, and use of the Goodreads API.
 
+## File explanation
 - application.py --> main app
 - import.py --> import from books.csv
 - get_key.py --> Goodreads key
@@ -19,3 +20,7 @@ Simple book review website "Bookworm Wannabe," using Flask, Python, SQL, Bootstr
     - search.html --> search results page
     - success.html --> success message page
     - 404.html --> what is rendered when the user uses the API with an invalid ISBN; returning a 404 error
+   
+---
+
+Watch the demo <a href="https://www.youtube.com/watch?v=XaUTkiJLEHQ&list=PLH2wYuURvrWQskB8BvBHlLlFj8IeHopvF&index=2">here!</a>
