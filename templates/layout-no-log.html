@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- LOGIN/SIGNUP -->
+<html>
+
+<head>
+    <title>Bookworm Wannabe | {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bwwstyle.css') }}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img id="logo" src="../static/BWW-LOGO.png">
+        <a class="navbar-brand" href="{{ url_for('index') }}">Bookworm Wannabe</a>
+    </nav>
+    {% block body %}
+    {% endblock %}
+</body>
+
+</html>

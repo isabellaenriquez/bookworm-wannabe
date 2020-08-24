@@ -1,0 +1,15 @@
+{% extends "layout-no-log.html" %}
+
+{% block title %}
+Welcome
+{% endblock %}
+
+{% block body %}
+<div class="index-btns">
+    <div>
+        <a href="{{ url_for('signup') }}"><button class="pink-btn" type="button">Sign Up</button></a>
+        <a href="{{ url_for('login') }}"><button class="pink-btn" type="button">Login</button></a>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title%}
+    Home
+{% endblock %}
+
+{% block body%}
+    <div class="section">   
+        <h1>Hello, {{ username }}.</h1>
+        <h3>You've made {{ review_count }} reviews on Bookworm Wannabe.</h3>
+        <div class="review-list">
+        {% for review in reviews %}
+            <table class="review">
+                <tr>
+                    <th><span class="proper">{{ review.title }}</span> by {{ review.author }} ({{ review.year }})</th>
+                </tr>
+                <tr>
+                    <td>
+                        Rating: {{ review.rating }} star(s)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            "{{ review.review }}"
+                        </p>
+                    </td>
+                </tr>
+            </table>
+    {% endfor %}</div>
+{% endblock %}

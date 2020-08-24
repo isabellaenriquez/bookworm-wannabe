@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{{ book.title }}
+{% endblock %}
+
+{% block body %}
+<div class="section">
+    <div class="subsection">
+        <h1><span class="proper">{{ book.title }}</span></h1>
+        <table>
+            <tr>
+                <th>Written by</th>
+                <td>{{ book.author }}</td>
+            </tr>
+            <tr>
+                <th>Published</th>
+                <td>{{ book.year }}</td>
+            </tr>
+            <tr>
+                <th>ISBN</th>
+                <td>{{ book.isbn }}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="subsection">
+        <div id="goodreads">
+            <h4>Goodreads Statistics</h4>
+            <p>Number of reviews: {{ gr_review_count }}</p>
+            <p>Average rating: {{ avg_rating }}</p>
+        </div>
+    </div>
+    <div class="subsection">
+        <h4>Bookworm Wannabe Reviews</h4>
+        <form action="/new-review" method="get">
+            <!-- make input field invisible in css-->
+            <input type="text" readonly class="form-control-plaintext" name="book-id" value="{{ book.id }}">
+            <button type="submit" class="teal-btn">Write review</button>
+        </form>
+    </div>
+    <div class="subsection">
+        {% if review_count == 0 %}
+            <h6>There are no Bookworm Wannabe reviews for {{ book.title }}.</h6>
+        {% endif %}
+
+        {% for review in reviews %}
+        <table class="review">
+            <tr>
+                <th>{{ review.username }}</th>
+            </tr>
+            <tr>
+                <td>
+                    Rating: {{ review.rating }} star(s)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        "{{ review.review }}"
+                    </p>
+                </td>
+            </tr>
+        </table>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

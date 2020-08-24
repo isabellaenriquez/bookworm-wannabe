@@ -1,0 +1,101 @@
+/* color palette 
+white 
+$bwwteal: #B2DFDB;
+$bwwpink: #FF8BB2; 
+$bwwdarkteal: #00796B;
+*/
+
+.pink-btn {
+  background-color: #FF8BB2;
+}
+
+.index-btns{
+  text-align: center;
+  align-items: center;
+}
+
+.index-btns div{
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#logo{
+  width: 4em;
+}
+
+.start-form{
+  margin: auto;
+  padding: 5rem;
+  background-color: #B2DFDB;
+}
+
+button{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 12px;
+}
+
+.teal-btn{
+  background-color: #00796B;
+  color: white;
+}
+
+.section{
+  padding: 5rem;
+}
+
+.subsection{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.review{
+  background-color: #B2DFDB;
+  border: #00796B;
+  border-width: 0.1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 80%;
+  border-radius: 15px 50px;
+  
+}
+
+#goodreads{
+  width: 80%;
+  background-color: #FF8BB2;
+  padding: 0.8rem;
+  border-radius: 25px;
+  margin-top: 1rem;
+  margin-bottom: 1rem; 
+  color: white;
+}
+
+.search-table{
+  width: 100%;
+  margin: 3rem;
+}
+
+th, td{
+  padding: 0.8rem;
+}
+
+.proper{
+  font-style: italic;
+}
+
+.form-control-plaintext{
+  visibility: collapse;
+  font-size: xx-small;
+}
+
+.form-group div{
+  width: 100%;
+  display: inline;
+}
+
+textarea{
+  width: inherit;
+}

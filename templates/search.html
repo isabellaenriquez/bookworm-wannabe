@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Search Results
+{% endblock %}
+
+
+{% block body %}
+<div class="section">
+    <h2>SEARCH RESULTS FOR: "{{ string }}"</h2>
+    <table class="search-table">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year</th>
+            <th>ISBN</th>
+        </tr>
+        {% for book in books %}
+            <tr>
+                <td><span class="proper">{{ book.title }}</span></td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.year }}</td>
+                <td>{{ book.isbn }}</td>
+                <td>
+                    <form class="form-inline" action="/details" method="get">
+                        <!-- make input field invisible in css-->
+                        <input type="text" readonly class="form-control-plaintext" name="book-id" value="{{ book.id }}"> 
+                        <button class="teal-btn" type="submit">View</button>
+                    </form>
+
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
