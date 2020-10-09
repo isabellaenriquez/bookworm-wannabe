@@ -5,7 +5,6 @@ Simple book review website using Flask, Python, SQL (PostgreSQL), Bootstrap, HTM
 ## File explanation
 - application.py --> main app
 - import.py --> import from books.csv
-- get_key.py --> Goodreads key
 - static --> images and stylesheets
 - templates --> HTML files
     - index.html --> landing page
